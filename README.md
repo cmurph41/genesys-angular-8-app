@@ -18,6 +18,7 @@ Npm: 6.14.4
 1. Clone this repository
 2. run 'npm install'
 3. Choose a script version: 
+
     'ng serve'
     This will serve the app, and will use static assets rather than the live api. This is to aid development and testing
 
