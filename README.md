@@ -16,7 +16,7 @@ Npm: 6.14.4
 
 ## Steps to run locally: 
 1. Clone this repository
-2. run 'npm install'
+2. Run 'npm install'
 3. Choose a script version: 
 
     'ng serve'
