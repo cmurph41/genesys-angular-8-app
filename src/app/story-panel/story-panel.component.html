@@ -1,0 +1,12 @@
+<mat-list-item *ngFor="let story of stories">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>{{ story.title }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>This article posted by {{ story.by }} {{ story.time*1000 | timeago }} has {{ story.descendants }} comments and
+            {{ story.score }} points
+        </p>
+        <a mat-button target="_blank" href="{{ story.url }}">Continue Reading</a>
+    </mat-expansion-panel>
+</mat-list-item>
+<button id="show-more-button" *ngIf="moreAvailable" mat-button (click)="loadMoreStories()"  style="width:100%">Show More</button>

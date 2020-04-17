@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, element, by } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -9,8 +9,19 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', () => {
+    browser.waitForAngularEnabled(false);
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('genesys-angular8-app app is running!');
+    expect(page.getTitleText()).toEqual('Welcome to Claire\'s version of HackerNews');
+  });
+
+  it('should test the headline text', () => {
+    page.navigateTo();
+    expect(page.getStory()).toEqual('This is a dummy story to use for dev and testing purposes');
+  });
+
+  it('should be able to click a headline', () => {
+    page.navigateTo();
+    expect(page.clickStory());
   });
 
   afterEach(async () => {

@@ -6,6 +6,15 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('app-root h1')).getText() as Promise<string>;
+  }
+  getStory() {
+    return element(by.css('.mat-expansion-panel-header-title')).getText() as Promise<string>;
+  }
+  clickStory() {
+    return element(by.css('.mat-expansion-panel-header-title')).click() as Promise<void>;
+  }
+  getStoryDescription() {
+    return element(by.css('.mat-expansion-panel-body p')).getText() as Promise<string>;
   }
 }
